@@ -10,9 +10,23 @@ Gear-E 프론트엔드 저장소입니다. 팀 공용 AI 작업 규칙과 셀프
 | [CLAUDE.md](CLAUDE.md) | `AGENTS.md`를 참조하는 상대 심볼릭 링크 |
 | [.agents/skills/self-review/SKILL.md](.agents/skills/self-review/SKILL.md) | Codex 셀프 리뷰 스킬 |
 | [.claude/skills/self-review/SKILL.md](.claude/skills/self-review/SKILL.md) | Claude 셀프 리뷰 스킬 |
-| [.github/pull_request_template.md](.github/pull_request_template.md) | PR 템플릿 |
+| [.github/PULL_REQUEST_TEMPLATE/default.md](.github/PULL_REQUEST_TEMPLATE/default.md) | 일반 PR 템플릿 (`develop` 대상) |
+| [.github/PULL_REQUEST_TEMPLATE/release.md](.github/PULL_REQUEST_TEMPLATE/release.md) | 승격 PR 템플릿 (`develop → main`) |
 | [.github/ISSUE_TEMPLATE/feature_request.md](.github/ISSUE_TEMPLATE/feature_request.md) | 기능·개선 이슈 템플릿 |
 | [.github/ISSUE_TEMPLATE/bug_report.md](.github/ISSUE_TEMPLATE/bug_report.md) | 버그 이슈 템플릿 |
+
+## PR·이슈 생성
+
+| 작업 | 생성 링크 | 적용 템플릿 |
+| --- | --- | --- |
+| 일반 PR | [develop 대상 PR 작성](https://github.com/Gear-E/gear-e-frontend/compare/develop...develop?expand=1&template=default.md) | `default.md` |
+| 승격 PR | [develop → main PR 작성](https://github.com/Gear-E/gear-e-frontend/compare/main...develop?expand=1&template=release.md) | `release.md` |
+| 기능·개선 이슈 | [기능·개선 제안](https://github.com/Gear-E/gear-e-frontend/issues/new?template=feature_request.md) | `feature_request.md` |
+| 버그 이슈 | [버그 보고](https://github.com/Gear-E/gear-e-frontend/issues/new?template=bug_report.md) | `bug_report.md` |
+
+일반 PR 링크는 base를 `develop`로 지정합니다. 처음에는 비교 대상도 `develop`이므로 `compare`에서 실제 작업 브랜치를 선택하고, PR 본문에 일반 템플릿이 적용됐는지 확인한 뒤 Draft PR로 생성합니다. 승격 PR은 정해진 회의 시간에만 생성·검토·병합합니다.
+
+여러 PR 템플릿은 브랜치에 따라 자동 선택되지 않습니다. 위 링크의 `template` 값으로 템플릿을 지정합니다. 이슈는 링크로 직접 열거나 GitHub의 `New issue` 화면에서 유형을 선택합니다.
 
 ## 개발 흐름
 
